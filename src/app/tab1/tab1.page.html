@@ -1,17 +1,141 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-toolbar>
+
+  <h3 style = "font-family: times; color: black; text-align: center">
+    Home
+  </h3>
   </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class = "body" scroll-y="true">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card style = " box-shadow: none; border-color: black; border-width: 2px; background-color: #FFC5C3; height: 40vh !important; margin-top:1vh !important" button = "true" routerLink="/second">
+
+    <ion-card-header style = "border-color: black;">
+      <ion-card-title style = "color:black; font-family: avenir;">
+      
+        Recently Added Recipes
+
+      </ion-card-title>
+      <ion-card-subtitle style = "color: black; font-family: curisve;">
+        Explore the last twenty recipes shared by users!
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content style = "background-color: #FFC5C3">
+
+      <img  src="assets/home1.png" style = "display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 20vh;
+      width: 50%;" /> 
+      </ion-card-content>
+
+  </ion-card>
+  <ion-row>
+
+  </ion-row>
+    <ion-row>
+      <ion-text>
+  <h4 style = "color:black; font-family: avenir; margin-left: 2vh">
+  
+    Our Staff's Favorites
+  
+  </h4>
+</ion-text>
+</ion-row>
+<ion-row>
+  <ion-card style = "box-shadow: none; height: 17vh;background-color: #FFEBD0"  button = "true" routerLink="/recipe1">
+      <ion-row>
+  <ion-col>
+      <img  src="assets/home2.png" style = "margin-right: auto; margin-left: auto; display: block; height: 15vh;" />
+  </ion-col>
+<ion-col >
+  <ion-text>
+  <h6 style = "color: black; font-family: times; text-align: left; font-size: 17px; margin-left: 20%;">
+Saved Recipes
+</h6>
+</ion-text>
+</ion-col> 
+<ion-col> 
+  <ion-row>
+  <ion-col></ion-col>
+  <ion-col></ion-col>
+  <ion-col>
+<h6>
+  <ion-icon size = "large" name="chevron-forward-outline"></ion-icon>
+</h6>
+</ion-col>
+</ion-row>
+</ion-col>
+</ion-row>
+  </ion-card>
+</ion-row>
+<ion-text>
+<h4 style = "color:black; font-family: avenir; text-align: left; margin-left: 3vh">
+  
+  Explore
+
+</h4>
+</ion-text>
+<ion-row>
+  <ion-col>
+  <ion-card style = "background: rgb(253, 204, 125); box-shadow: none" button = "true" routerLink="/popular">
+        <img src="assets/popular.svg" style = "margin-left: auto; margin-right: auto; margin-top: 1vh; margin-bottom: 2vh; width: 50%;  display: block; height: 10vh"/>
+</ion-card>
+<h5 style = "color: black; font-family: times; text-align: center;">
+ Popular Pick
+  </h5>
+</ion-col>
+
+<ion-col>
+  <ion-card style = "background: rgb(238, 125, 102); box-shadow: none" button = "true" routerLink="/crazy">
+
+          <img src="assets/crazy.svg" style = "margin-left: auto; margin-right: auto; margin-top: 2vh; margin-bottom: 2vh; width: 50%; display: block; height: 10vh"/>
+  </ion-card>
+  <h6 style = "color: black; font-family: times; text-align: center;">
+    Crazy Combination
+    </h6>
+</ion-col>
+
+<ion-col>
+  <ion-card style = "background: rgb(210, 218, 201); box-shadow: none" button = "true" routerLink="/healthy1">
+
+          <img src="assets/healthy2.svg" style = "margin-left: auto; margin-right: auto; margin-top: 2vh; margin-bottom: 2vh; width: 50%; display: block; height: 10vh"/>
+  </ion-card>
+  <h6 style = "color: black; font-family: times; text-align: center;">
+    Healthy Happiness
+    </h6>
+</ion-col>
+</ion-row>
+<ion-row>
+<h4 style = "color:black; font-family: avenir; text-align: left; margin-left: 3vh;">
+  
+  Create
+
+</h4>
+</ion-row>
+<ion-row>
+<ion-card style = "--background: #121931; box-shadow: none; margin: none">
+  <ion-card-header style = "padding-top: 0%">
+    <ion-col>
+  <h4 style = "text-align:center; color: white; font-family: times">
+    Have a fun, new recipe?
+      </h4>
+      <h6 style = "text-align:center; color: white; font-family: times">
+        Share it!
+          </h6>
+          <img src="assets/clip-bio-technologies.png" style = "display: block;
+          margin-left: auto;
+          margin-right: auto;
+          height: 40vh;
+          width: 100%"/>
+    </ion-col>
+
+
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand= "round" routerLink="/create" style = "--background: #428DFC; margin-left:2vh; --box-shadow: none; color: white; font-family: avenir; font-size: 15px; margin-top: 10%">
+        Create New Recipe
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  </ion-row>
 </ion-content>

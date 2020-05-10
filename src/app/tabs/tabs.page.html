@@ -1,20 +1,40 @@
 <ion-tabs>
 
-  <ion-tab-bar slot="bottom">
+  <ion-tab-bar slot="bottom" style = "--background: white;">
     <ion-tab-button tab="tab1">
-      <ion-icon name="triangle"></ion-icon>
-      <ion-label>Tab 1</ion-label>
+      <ion-label><ion-icon name="home-outline" style = "font-size: 4vh"></ion-icon>
+      <h6>
+        Home
+      </h6></ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="tab2">
-      <ion-icon name="ellipse"></ion-icon>
-      <ion-label>Tab 2</ion-label>
+      <ion-label><ion-icon name="bookmark-outline" style = "font-size: 4vh"></ion-icon>
+        <h6>
+          Saved
+        </h6></ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="tab3">
-      <ion-icon name="square"></ion-icon>
-      <ion-label>Tab 3</ion-label>
+      <ion-label><ion-icon name="add-outline" style = "font-size: 4vh"></ion-icon>
+        <h6>
+          Create
+        </h6></ion-label>
     </ion-tab-button>
   </ion-tab-bar>
+  
+  <script src="../package/js/swiper.min.js"></script>
 
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+    });
+  </script>
 </ion-tabs>

@@ -1,0 +1,28 @@
+@media screen and (min-width: 701px) {
+    div.widthAdjustment {
+        width: 680px;
+    }
+
+}
+@media screen and (max-width: 700px) {
+    div.widthAdjustment {
+        width: 95%;
+    }
+}
+
+ion-header{
+    margin-top: 40%;
+    margin-left: 40%;
+}
+ion-item{
+    --background: #fad9c1;
+    opacity: 0.9;
+    border-radius: 30px;
+}
+ion-button{
+    --text-align: center;
+    --background-color: rgb(210,1,33);
+}
+ion-content{
+    --background: #f9caa7;
+}

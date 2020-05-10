@@ -1,0 +1,60 @@
+<ion-toolbar style = "box-shadow: none;">
+  <ion-title>
+    <ion-row style = "margin-top: 8%">
+      <ion-col>
+          <ion-icon name="chevron-back-sharp" size ="large" routerLink = "/tabs/tabs/tab1"></ion-icon>
+        </ion-col>
+  <ion-col>
+  <p style = "font-family: times; text-align: center; font-size: 20px; color: black; margin-top: 2%">
+  <b> 
+    Healthy Pick
+  </b>
+  
+</p>
+
+</ion-col>
+<ion-col>
+
+</ion-col>
+</ion-row>
+  </ion-title>
+  </ion-toolbar>
+<ion-content [fullscreen]="true" class = "body">
+  <ion-card *ngFor="let article of data" class = "content" style = "--background: #f9caa7; box-shadow: none;">
+    <!-- <ion-img [src]="article.urlToImage"></ion-img> -->
+    <img src="assets/cherry-upgrade.png" style = "display: block; margin-right: auto; margin-left:auto; height: 30vh"/>
+    <ion-card-header>
+      <ion-card-subtitle style = "color:  black; font-family: avenir; font-size: 13px">{{'Chef ' + article.Chef}}</ion-card-subtitle >
+      <ion-card-title style = "font-family: avenir; font-size: 26px">{{article.Name}}</ion-card-title>
+    </ion-card-header>
+      <ion-card-content>
+        <h4 style = "color: #86858A; font-family: avenir; font-size: 18px" style = "color: #86858A; font-family: avenir; font-size: 18px">
+        {{'Ingredients: ' + article.Ingredients}}
+      </h4>
+      <br>
+      <h4 style = "color: #86858A; font-family: avenir; font-size: 18px">
+        {{'Instructions: ' + article.Instructions}}
+      </h4>
+    </ion-card-content>
+       <br>
+      <ion-button expand = "full" (click) = "save(article)" style = "--background: #fe9c8f; --box-shadow: none; color: white; font-family: lato; font-size: 15px">
+        Save
+      </ion-button>
+    
+  </ion-card>
+</ion-content>
+<script>
+  const button = document.querySelector('ion-button');
+  button.addEventListener('click', handleButtonClick);
+
+  async function handleButtonClick() {
+    const toast = await toastController.create({
+      color: 'dark',
+      duration: 2000,
+      message: 'Paired successfully',
+      showCloseButton: true
+    });
+
+    await toast.present();
+  }
+</script>

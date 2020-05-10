@@ -1,0 +1,43 @@
+
+  <ion-toolbar>
+    <h3 style = "font-family: times; color: black; text-align: center">
+      Create
+    </h3>
+
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink = "/tabs/tabs/tab3" color = "danger">
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-item>
+    <ion-input [(ngModel)] = "chef" style = "font-family: cursive">Your Name</ion-input>
+  </ion-item>
+<!-- Textarea in an item with a placeholder -->
+
+<ion-item>
+  <ion-textarea [(ngModel)] = "title" style = "font-family: cursive" placeholder = "Describe the dish"></ion-textarea>
+</ion-item>
+
+
+<!-- Textarea in an item with a floating label -->
+
+<ion-item>
+  <ion-textarea [(ngModel)] = "ingredients" style = "font-family: cursive" placeholder = "List the ingredients"></ion-textarea>
+</ion-item>
+
+<!-- Disabled and readonly textarea in an item with a stacked label -->
+
+<ion-item>
+  <ion-textarea [(ngModel)] = "instructions" style = "font-family: cursive" placeholder = "Describe how to make the dish"></ion-textarea>
+</ion-item>
+
+
+<ion-button expand= "round" (click) = "submit()" style = "--background: #fec8c1; --box-shadow: none; color: black; font-family: avenir; font-size: 15px;  margin: 2vh">
+  Submit
+</ion-button>
+
+<!-- Textarea with custom number of rows and cols -->
+
+</ion-content>

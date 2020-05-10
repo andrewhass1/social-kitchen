@@ -1,17 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+<ion-toolbar>
+
+  <h3 style = "font-family: times; color: black; text-align: center">
+    Saved
+  </h3>
   </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-row>
+  <ion-card *ngFor="let article of data" class = "content" style = "--background: white; box-shadow: none;">
+    <br>
+    <!-- <ion-img [src]="article.urlToImage"></ion-img> -->
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-card-header>
+      <ion-card-subtitle style = "font-family: avenir; font-size: 15px; color: black">{{'Chef: ' + article.Chef}}</ion-card-subtitle>
+      <ion-card-title style = "font-family: avenir; font-size: 26px">{{article.Name}}</ion-card-title>
+    </ion-card-header>
+      <ion-card-content>
+        <h4 style = "color: #86858A; font-family: avenir; font-size: 18px" style = "color: #86858A; font-family: avenir; font-size: 18px">
+        {{'Ingredients: ' + article.Ingredients}}
+      </h4>
+      <br>
+      <h4 style = "color: #86858A; font-family: avenir; font-size: 18px">
+        {{'Instructions: ' + article.Instructions}}
+      </h4>
+    </ion-card-content>
+    <ion-button expand= "block" (click) = "deleteSong(article.id)" style = "--background: #fe9c8f; --box-shadow: none; color: black; font-family: lato; font-size: 15px;  margin: 3vh">
+      Remove
+    </ion-button>
+  </ion-card>
+</ion-row>
+<br>
 </ion-content>

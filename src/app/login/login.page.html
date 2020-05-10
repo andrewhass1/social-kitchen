@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<ion-content padding class="background coverart img-fluid" alt="Responsive image">
+  <ion-row><ion-col>  
+    <h3 style = "font-family: Avenir-Heavy; color: black; text-align: center; margin-top: 10%">Login</h3>
+  </ion-col></ion-row>
+<ion-row>
+     <img src="assets/fruit.svg" style = "display: block; margin-left: auto; margin-right: auto; width: 50%; height:100%; margin-bottom: 10%"/>
+</ion-row>
+
+<ion-row><ion-col>
+  <ion-item style = "color:black;" expand = "full" shape = "round">
+    <img height = 25px width = 25px src="https://img.icons8.com/carbon-copy/100/000000/email.png" style = "margin-right: 10px;"/>
+    <ion-input type="text" placeholder = "Email"  [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+
+
+<ion-row>
+  <ion-col>
+  <ion-item expand = "full" shape = "round">
+    <img height = 20px width = 20px src="https://img.icons8.com/ios/64/000000/password--v1.png" style = "margin-right: 10px;"/>
+    <ion-input type="password" placeholder = "Password" style= "color:black;" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+  <ion-button (click)="login()" expand = "full" shape = "round" style = "text-align: center;
+    --color: white; --background: #fe9c8f;
+    --color-hover:#fe9c8f; --background-hover:white; --border-radius:30px; margin-bottom: 5%">Login</ion-button>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h5 style = " text-align: center;">
+    <ion-button fill = "none" style = "color:black; font-size: 13px;" routerLink="/register">Create Account</ion-button>
+  </h5>
+  </ion-col>
+  <ion-col>
+    <h5 style = " text-align:center;">
+    <ion-button fill = "none" (click) = "recover()" style = " color:black; font-size: 13px;">Reset Password</ion-button>
+  </h5>
+  </ion-col>
+  </ion-row>
+</ion-content>
